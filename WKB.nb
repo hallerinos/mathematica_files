@@ -1,0 +1,380 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12218,        372]
+NotebookOptionsPosition[     11491,        350]
+NotebookOutlinePosition[     11917,        367]
+CellTagsIndexPosition[     11874,        364]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["WKB ansatz", "Title",
+ CellChangeTimes->{{3.837849794257003*^9, 3.837849797805005*^9}, {
+  3.837935365690668*^9, 
+  3.837935367423368*^9}},ExpressionUUID->"ee2b7f27-e884-46b3-acf8-\
+7ce05d38298f"],
+
+Cell[TextData[{
+ "Suppose we have the Schr\[ODoubleDot]dinger equation\n\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["\[HBar]", "2"], 
+      FractionBox[
+       SuperscriptBox["d", "2"], 
+       SuperscriptBox["dx", "2"]], "\[CapitalPsi]"}], " ", "+", 
+     RowBox[{"2", 
+      RowBox[{"m", "(", 
+       RowBox[{"E", " ", "-", 
+        RowBox[{"V", "(", "x", ")"}]}], ")"}], "\[CapitalPsi]"}]}], " ", "=", 
+    " ", "0"}], TraditionalForm]],ExpressionUUID->
+  "7b6b4da2-5744-4d1c-826c-c44676d4c753"],
+ "\n\nThat is precisely in the form of the example at \
+https://en.wikipedia.org/wiki/WKB_approximation for which \[Epsilon] is \
+replaced by \[HBar] and Q(x) = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"2", 
+    RowBox[{"m", "(", 
+     RowBox[{"E", "-", 
+      RowBox[{"V", "(", "x", ")"}]}], ")"}]}], TraditionalForm]],
+  ExpressionUUID->"cdea1ad8-bce6-4313-bfa0-c8f9d55d82a1"],
+ ". Since we are dealing with complex functions, the solution in the example \
+won\[CloseCurlyQuote]t be sufficient and we must decompose the ansatz ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[CapitalPsi]", "=", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"\[CapitalPhi]", "(", "x", ")"}]]}], TraditionalForm]],
+  ExpressionUUID->"7597d07c-b9f7-40bf-bf55-4a578cb7f32d"],
+ " into real and complex contributions of the exponential argument. Plugging \
+in the ansatz in the wave equation simply gives \n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"\[CapitalPhi]", "''"}], 
+      RowBox[{"(", "x", ")"}]}], "+", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"\[CapitalPhi]", "'"}], 
+        RowBox[{"(", "x", ")"}]}], ")"}], "2"]}], "=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"2", "m"}], 
+      SuperscriptBox["\[HBar]", "2"]], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"V", "(", "x", ")"}], "-", "E"}], ")"}]}]}], TraditionalForm]],
+  ExpressionUUID->"d6922dd3-c1f3-401e-903c-290f61bb1e1b"],
+ "\nsuch that we may construct a coupled differential equation for the \
+decomposed contributions to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[CapitalPhi]", "'"}], 
+     RowBox[{"(", "x", ")"}]}], "=", 
+    RowBox[{
+     RowBox[{"A", "(", "x", ")"}], "+", 
+     RowBox[{"\[ImaginaryI]B", "(", "x", ")"}]}]}], TraditionalForm]],
+  ExpressionUUID->"c60100f2-7579-46ef-81af-5b2cd004dadc"],
+ ".\n\nThis then yields\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"A", "'"}], 
+       RowBox[{"(", "x", ")"}]}], " ", "+", " ", 
+      SuperscriptBox[
+       RowBox[{"A", "(", "x", ")"}], "2"], "-", 
+      SuperscriptBox[
+       RowBox[{"B", "(", "x", ")"}], "2"]}], " ", "=", " ", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"2", "m"}], 
+       SuperscriptBox["\[HBar]", "2"]], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"V", "(", "x", ")"}], "-", "E"}], ")"}]}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"B", "'"}], 
+       RowBox[{"(", "x", ")"}]}], "+", 
+      RowBox[{"2", 
+       RowBox[{"A", "(", "x", ")"}], 
+       RowBox[{"B", "(", "x", ")"}]}]}], " ", "=", " ", "0"}], ","}], 
+   TraditionalForm]],ExpressionUUID->"9da46fbf-e085-45a8-b459-7038ec7d377e"],
+ "\nwhich is still an exact system of differential equations that satisfies \
+the Schr\[ODoubleDot]dinger equation.\n\nIn what follows we use the WKB \
+Series of the real and complex values, i.e.\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"S", "(", "x", ")"}], "=", 
+    RowBox[{
+     FractionBox["1", "\[HBar]"], 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"n", "=", "0"}], "\[Infinity]"], 
+      RowBox[{
+       SuperscriptBox["\[HBar]", "n"], 
+       RowBox[{
+        SubscriptBox["S", "n"], "(", "x", ")"}]}]}]}]}], TraditionalForm]],
+  ExpressionUUID->"424c7a29-408f-45e9-82bb-0e76a7a75596"],
+ " for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"S", " ", "\[Element]", " ", 
+    RowBox[{"{", 
+     RowBox[{"A", ",", "B"}], "}"}]}], TraditionalForm]],ExpressionUUID->
+  "b1ed310b-9271-4ea6-92d4-dbebf6934ec2"],
+ ".\nWhich decomposes the above DE into different orders in \[HBar].\n\nThe \
+zeroth order results in\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         SubscriptBox["\[HBar]A", "0"], "'"}], 
+        RowBox[{"(", "x", ")"}]}], " ", "+", " ", 
+       SuperscriptBox[
+        RowBox[{
+         SubscriptBox["A", "0"], "(", "x", ")"}], "2"], "-", 
+       SuperscriptBox[
+        RowBox[{
+         SubscriptBox["B", "0"], "(", "x", ")"}], "2"], "+", 
+       RowBox[{"2", 
+        RowBox[{"m", "(", 
+         RowBox[{"E", "-", 
+          RowBox[{"V", "(", "x", ")"}]}], ")"}]}]}], "\[TildeTilde]", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["A", "0"], 
+        SuperscriptBox[
+         RowBox[{"(", "x", ")"}], "2"]}], "-", 
+       SuperscriptBox[
+        RowBox[{
+         SubscriptBox["B", "0"], "(", "x", ")"}], "2"], "+", 
+       RowBox[{"2", 
+        RowBox[{"m", "(", 
+         RowBox[{"E", "-", 
+          RowBox[{"V", "(", "x", ")"}]}], ")"}]}]}]}], "=", " ", "0"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         SubscriptBox["\[HBar]B", "0"], "'"}], 
+        RowBox[{"(", "x", ")"}]}], "+", 
+       RowBox[{"2", 
+        RowBox[{
+         SubscriptBox["A", "0"], "(", "x", ")"}], 
+        RowBox[{
+         SubscriptBox["B", "0"], "(", "x", ")"}]}]}], " ", "\[TildeTilde]", 
+      RowBox[{"2", 
+       RowBox[{
+        SubscriptBox["A", "0"], "(", "x", ")"}], 
+       RowBox[{
+        SubscriptBox["B", "0"], "(", "x", ")"}]}]}], "=", " ", "0"}], ","}], 
+   TraditionalForm]],ExpressionUUID->"568eb1f2-3b5d-407a-a6cb-55770befc6f7"],
+ "\nwhere we neglect terms of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"O", "(", "\[HBar]", ")"}], TraditionalForm]],ExpressionUUID->
+  "e030326f-1fb4-4b63-b3bf-a82040c89276"],
+ ".\n\nApparently, this yields two cases, i.e.\n\t1. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["A", "0"], "(", "x", ")"}], "=", "0"}], TraditionalForm]],
+  ExpressionUUID->"48433cc8-95b6-42a3-bf34-2f35bf925ac3"],
+ "\n\t\tThen, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["B", "0"], "(", "x", ")"}], "=", 
+    RowBox[{"\[PlusMinus]", 
+     SqrtBox[
+      RowBox[{"2", 
+       RowBox[{"m", "(", 
+        RowBox[{"E", "-", 
+         RowBox[{"V", "(", "x", ")"}]}], ")"}]}]]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "d39a3689-2ba8-471e-a2b1-023d804cefa7"],
+ ", corresponding to the classically allowed energies, i.e. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"E", ">", "V"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "fc8cdb30-da17-482d-82d3-232fb2f8f0df"],
+ ".\n\t2. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["B", "0"], "(", "x", ")"}], "=", "0"}], TraditionalForm]],
+  ExpressionUUID->"3aafe7d0-7eab-4065-bb3c-dcb9f8e5f650"],
+ "\n\t\tObviously, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["A", "0"], "(", "x", ")"}], "=", 
+    RowBox[{"\[PlusMinus]", 
+     SqrtBox[
+      RowBox[{"2", 
+       RowBox[{"m", "(", 
+        RowBox[{"V", "-", 
+         RowBox[{"E", "(", "x", ")"}]}], ")"}]}]]}]}], TraditionalForm]],
+  ExpressionUUID->"b7e63f06-db58-4a90-97ad-dbfc6c43f76b"],
+ ", corresponding to the classically forbidden energies, i.e. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"V", ">", "E"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "54dbc7b7-a9dd-490c-9d68-38cab46de6dd"],
+ ".\nThen, at first order, we derive ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["A", "1"], "(", "x", ")"}], "=", 
+    FractionBox[
+     RowBox[{"-", 
+      RowBox[{
+       SubscriptBox["A", "0"], "'"}]}], 
+     RowBox[{"2", 
+      SubscriptBox["A", "0"]}]]}], TraditionalForm]],ExpressionUUID->
+  "dea0a112-8bc9-4665-a386-777f0153a4f1"],
+ " or ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["A", "1"], "(", "x", ")"}], "=", 
+    FractionBox[
+     RowBox[{"-", 
+      RowBox[{
+       SubscriptBox["B", "0"], "'"}]}], 
+     RowBox[{"2", 
+      SubscriptBox["B", "0"]}]]}], TraditionalForm]],ExpressionUUID->
+  "67383187-e34c-4463-85fb-fb7efc2e16fd"],
+ ", depending on case 2. or 1., respectively. The final result is\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Psi]", "\[PlusMinus]"], "(", "x", ")"}], " ", "=", " ", 
+    RowBox[{
+     SubscriptBox["c", "\[PlusMinus]"], 
+     FractionBox[
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        FractionBox["1", "\[HBar]"], 
+        RowBox[{"\[Integral]", 
+         RowBox[{"dx", 
+          SqrtBox[
+           RowBox[{"2", "m", 
+            RowBox[{"(", 
+             RowBox[{"V", "-", "E"}], ")"}]}]]}]}]}]], 
+      RowBox[{
+       SqrtBox["\[HBar]"], 
+       RadicalBox[
+        RowBox[{"2", 
+         RowBox[{"m", "(", 
+          RowBox[{"V", "-", "E"}], ")"}]}], "4",
+        MultilineFunction->None,
+        SurdForm->True]}]]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "89d18ca6-d4d1-47e7-a2c7-ed1ff6a82fd2"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.8378498238837223`*^9, 3.837849856167656*^9}, {
+   3.83784993087844*^9, 3.8378501759523907`*^9}, {3.837850219267149*^9, 
+   3.8378504287624903`*^9}, {3.837850478163425*^9, 3.8378504785343447`*^9}, {
+   3.837850512214344*^9, 3.837850514064702*^9}, {3.837850582882245*^9, 
+   3.837850984027144*^9}, {3.837851076418913*^9, 3.837851372138412*^9}, {
+   3.837851411252412*^9, 3.837851618861288*^9}, {3.837852408306292*^9, 
+   3.8378524184443483`*^9}, {3.8378528015298643`*^9, 3.837852806853771*^9}, {
+   3.837934591727478*^9, 3.83793459640606*^9}, {3.837934661070107*^9, 
+   3.837935158900975*^9}, {3.8379352081972933`*^9, 3.837935282786847*^9}, 
+   3.837935313808343*^9},ExpressionUUID->"bb9fa314-b878-42fb-9264-\
+72a7e779d52c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Example", ":", " ", 
+  RowBox[{"The", " ", "harmonic", " ", "Oscillator"}]}]], "Title",
+ CellChangeTimes->{{3.837851556796175*^9, 3.837851568134351*^9}, {
+  3.8379353217725153`*^9, 
+  3.837935353494279*^9}},ExpressionUUID->"47aa00a5-1f02-40cf-a1f6-\
+d0b0bb42bcee"],
+
+Cell["\<\
+The harmonic Oscillator will be the ideal example to compare the power of the \
+Ansatz to the analytic solution, provided by Hermite polynomials, given by\
+\>", "Text",
+ CellChangeTimes->{{3.837935375771125*^9, 
+  3.837935414021131*^9}},ExpressionUUID->"c8919e12-f7aa-4263-a0ef-\
+7cb5aa30c318"]
+}, Open  ]]
+},
+WindowSize->{1440, 847},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"853d7694-10d3-48dc-a2f3-78bafbb094f5"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 202, 4, 146, "Title",ExpressionUUID->"ee2b7f27-e884-46b3-acf8-7ce05d38298f"],
+Cell[785, 28, 10058, 300, 1223, "Text",ExpressionUUID->"bb9fa314-b878-42fb-9264-72a7e779d52c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10880, 333, 288, 6, 146, "Title",ExpressionUUID->"47aa00a5-1f02-40cf-a1f6-d0b0bb42bcee"],
+Cell[11171, 341, 304, 6, 88, "Text",ExpressionUUID->"c8919e12-f7aa-4263-a0ef-7cb5aa30c318"]
+}, Open  ]]
+}
+]
+*)
+
