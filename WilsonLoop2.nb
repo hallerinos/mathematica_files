@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     85984,       2225]
-NotebookOptionsPosition[     83033,       2171]
-NotebookOutlinePosition[     83430,       2187]
-CellTagsIndexPosition[     83387,       2184]
+NotebookDataLength[     87873,       2263]
+NotebookOptionsPosition[     84630,       2206]
+NotebookOutlinePosition[     85027,       2222]
+CellTagsIndexPosition[     84984,       2219]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2091,7 +2091,7 @@ Cell[BoxData[
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
        Hold[$CellContext`num$$], 18}, 1, 36, 1}}, Typeset`size$$ = {
-    576., {125., 130.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    311., {3., 10.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
     Typeset`skipInitDone$$ = True}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`num$$ = 18}, 
@@ -2105,7 +2105,7 @@ Cell[BoxData[
 $CellContext`vecs1, $CellContext`num$$, $CellContext`Lx, $CellContext`Ly], 
       "Specifications" :> {{{$CellContext`num$$, 18}, 1, 36, 1}}, 
       "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{621., {170., 176.}},
+     ImageSizeCache->{356., {51., 57.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -2133,7 +2133,7 @@ Cell[BoxData[
        Hold[$CellContext`tt0y$$], 0.5}, 0, 2}, {{
        Hold[$CellContext`td1x$$], 2}, 0, 2}, {{
        Hold[$CellContext`cond$$], 4}, 1, 16, 1}}, Typeset`size$$ = {
-    360., {178., 182.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    480., {3., 10.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
     Typeset`skipInitDone$$ = True}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
@@ -2154,7 +2154,7 @@ $CellContext`Ly],
          2}, {{$CellContext`td0y$$, 1}, 0, 2}, {{$CellContext`tt0y$$, 0.5}, 0,
           2}, {{$CellContext`td1x$$, 2}, 0, 2}, {{$CellContext`cond$$, 4}, 1, 
          16, 1}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{405., {279., 285.}},
+     ImageSizeCache->{525., {107., 113.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -2166,7 +2166,42 @@ $CellContext`Ly],
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{3.854690725781034*^9},
- CellLabel->"Out[71]=",ExpressionUUID->"fa5633c2-a28e-4a4f-b8c7-f97ba0ab58d5"]
+ CellLabel->"Out[71]=",ExpressionUUID->"fa5633c2-a28e-4a4f-b8c7-f97ba0ab58d5"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "partd", 
+   "\"Part specification \\!\\(\\*RowBox[{\\\"ps\\\", \
+\\\"\[LeftDoubleBracket]\\\", \\\"4\\\", \\\"\[RightDoubleBracket]\\\"}]\\) \
+is longer than depth of object.\"", 2, 32, 1, 32003930707887594294, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.85882164981211*^9},
+ CellLabel->"",ExpressionUUID->"254f2f31-1162-4157-b7e7-f5bda9b2201a"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Set", "shape", 
+   "\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"vals1\\\", \\\",\\\", \
+\\\"vecs1\\\"}], \\\"}\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"ComputeEigenstateCorner\\\", \\\"[\\\", \
+RowBox[{\\\"indVar\\\", \\\",\\\", RowBox[{\\\"{\\\", RowBox[{\\\"1\\\", \
+\\\",\\\", \\\"2\\\", \\\",\\\", \\\"0.5`\\\", \\\",\\\", \\\"0.5`\\\"}], \
+\\\"}\\\"}], \\\",\\\", \\\"HfullMat\\\", \\\",\\\", RowBox[{\\\"ps\\\", \\\"\
+\[LeftDoubleBracket]\\\", \\\"4\\\", \\\"\[RightDoubleBracket]\\\"}]}], \\\"]\
+\\\"}]\\) are not the same shape.\"", 2, 32, 2, 32003930707887594294, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.8588216498514357`*^9},
+ CellLabel->"",ExpressionUUID->"f4714805-de55-4bf0-92eb-19f9d35cd5f6"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "partd", 
+   "\"Part specification \\!\\(\\*RowBox[{\\\"ps\\\", \
+\\\"\[LeftDoubleBracket]\\\", \\\"4\\\", \\\"\[RightDoubleBracket]\\\"}]\\) \
+is longer than depth of object.\"", 2, 32, 3, 32003930707887594294, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.858821649933329*^9},
+ CellLabel->"",ExpressionUUID->"0327c9f8-1270-4db7-972e-5fc8d590d537"]
 }, Open  ]]
 },
 WindowSize->{1440, 793},
@@ -2224,8 +2259,11 @@ Cell[73065, 1939, 221, 4, 34, "Output",ExpressionUUID->"2f04de1d-a067-4be9-a643-
 Cell[CellGroupData[{
 Cell[73323, 1948, 3158, 86, 262, "Input",ExpressionUUID->"eb1939b6-a45b-4fb6-8bc7-953defc719a9"],
 Cell[76484, 2036, 2443, 47, 239, "Output",ExpressionUUID->"35c490f4-1a0c-4384-a932-33b6189ac6f2"],
-Cell[78930, 2085, 1682, 34, 365, "Output",ExpressionUUID->"a0e479a5-289d-481d-98e0-5be3e8ee3b46"],
-Cell[80615, 2121, 2402, 47, 606, "Output",ExpressionUUID->"fa5633c2-a28e-4a4f-b8c7-f97ba0ab58d5"]
+Cell[78930, 2085, 1677, 34, 127, "Output",ExpressionUUID->"a0e479a5-289d-481d-98e0-5be3e8ee3b46"],
+Cell[80610, 2121, 2399, 47, 239, "Output",ExpressionUUID->"fa5633c2-a28e-4a4f-b8c7-f97ba0ab58d5"],
+Cell[83012, 2170, 413, 8, 24, "Message",ExpressionUUID->"254f2f31-1162-4157-b7e7-f5bda9b2201a"],
+Cell[83428, 2180, 769, 13, 24, "Message",ExpressionUUID->"f4714805-de55-4bf0-92eb-19f9d35cd5f6"],
+Cell[84200, 2195, 414, 8, 24, "Message",ExpressionUUID->"0327c9f8-1270-4db7-972e-5fc8d590d537"]
 }, Open  ]]
 }
 ]
