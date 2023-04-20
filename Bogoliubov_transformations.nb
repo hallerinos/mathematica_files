@@ -553,7 +553,7 @@ Cell["Heisenberg model on a n-dimensional cube", "Section",
   3.8902760834333687`*^9}},ExpressionUUID->"48707701-8e1c-4f32-87e4-\
 790552434819"]
 },
-WindowSize->{960, 1027},
+WindowSize->{1440, 847},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"13.2 for Mac OS X ARM (64-bit) (November 18, 2022)",
 StyleDefinitions->"Default.nb",
