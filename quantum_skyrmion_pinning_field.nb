@@ -1,0 +1,171 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6002,        163]
+NotebookOptionsPosition[      5091,        138]
+NotebookOutlinePosition[      5485,        154]
+CellTagsIndexPosition[      5442,        151]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"2", "*", "0.78"}]], "Input",
+ CellChangeTimes->{{3.89392581333744*^9, 3.893925819117839*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"2f813f2d-6133-4b88-8782-de11c368ff95"],
+
+Cell[BoxData["1.56`"], "Output",
+ CellChangeTimes->{3.893925819863637*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"93d10999-1434-40f0-8d04-2d33fa75aaaa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Bpin", "*", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{
+          RowBox[{"-", "\[Alpha]"}], " ", "r"}]]}], ",", 
+       RowBox[{
+        FractionBox["Bpin", 
+         SqrtBox[
+          RowBox[{"2", "\[Pi]", " ", 
+           SuperscriptBox["\[Sigma]", "2"]}]]], " ", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{"-", " ", 
+          FractionBox[
+           SuperscriptBox["r", "2"], 
+           RowBox[{"2", " ", 
+            SuperscriptBox["\[Sigma]", "2"]}]]}]]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"r", ",", "0", ",", "10"}], "}"}], ",", 
+     RowBox[{"PlotRange", "->", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "Bpin"}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"Bpin", ",", "0.5"}], "}"}], ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Alpha]", ",", "2"}], "}"}], ",", "0", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Sigma]", ",", "2"}], "}"}], ",", "0", ",", "4"}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.893925481879353*^9, 3.8939256044773703`*^9}, {
+  3.893932847293352*^9, 3.893932899315228*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"72c61cb2-0b76-4ef4-922d-301fdaa5e946"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`Bpin$$ = 0.304, $CellContext`\[Alpha]$$ = 
+    1.3, $CellContext`\[Sigma]$$ = 0.36, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`Bpin$$], 0.5}, 0, 1}, {{
+       Hold[$CellContext`\[Alpha]$$], 2}, 0, 4}, {{
+       Hold[$CellContext`\[Sigma]$$], 2}, 0, 4}}, Typeset`size$$ = {
+    360., {114., 119.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`Bpin$$ = 0.5, $CellContext`\[Alpha]$$ = 
+        2, $CellContext`\[Sigma]$$ = 2}, "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[{$CellContext`Bpin$$ 
+         E^((-$CellContext`\[Alpha]$$) $CellContext`r), ($CellContext`Bpin$$/
+          Sqrt[2 Pi $CellContext`\[Sigma]$$^2]) 
+         E^(-($CellContext`r^2/(
+            2 $CellContext`\[Sigma]$$^2)))}, {$CellContext`r, 0, 10}, 
+        PlotRange -> {0, $CellContext`Bpin$$}], 
+      "Specifications" :> {{{$CellContext`Bpin$$, 0.5}, 0, 
+         1}, {{$CellContext`\[Alpha]$$, 2}, 0, 
+         4}, {{$CellContext`\[Sigma]$$, 2}, 0, 4}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{404., {187., 193.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.8939255389041367`*^9, 3.89392561473603*^9}, {
+  3.893932888926259*^9, 3.893932900340654*^9}},
+ CellLabel->"Out[11]=",ExpressionUUID->"5d2640f6-e1df-4999-a12a-7ab84058cd79"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"387.94", "/", "2"}]], "Input",
+ CellChangeTimes->{{3.893925750846341*^9, 3.893925753628447*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"5f3cfdbc-20a6-4526-a993-af6051c6168a"],
+
+Cell[BoxData["193.97`"], "Output",
+ CellChangeTimes->{3.89392575396976*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"356224d2-9980-46c9-9eba-6d8bcf0e1014"]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{Automatic, 251}, {74, Automatic}},
+FrontEndVersion->"13.1 for Mac OS X ARM (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"de93a35b-0790-4225-85ea-aa6434edfa3e"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 195, 3, 30, "Input",ExpressionUUID->"2f813f2d-6133-4b88-8782-de11c368ff95"],
+Cell[778, 27, 152, 2, 34, "Output",ExpressionUUID->"93d10999-1434-40f0-8d04-2d33fa75aaaa"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[967, 34, 1441, 42, 96, "Input",ExpressionUUID->"72c61cb2-0b76-4ef4-922d-301fdaa5e946"],
+Cell[2411, 78, 2273, 45, 422, "Output",ExpressionUUID->"5d2640f6-e1df-4999-a12a-7ab84058cd79"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4721, 128, 198, 3, 30, "Input",ExpressionUUID->"5f3cfdbc-20a6-4526-a993-af6051c6168a"],
+Cell[4922, 133, 153, 2, 34, "Output",ExpressionUUID->"356224d2-9980-46c9-9eba-6d8bcf0e1014"]
+}, Open  ]]
+}
+]
+*)
+
