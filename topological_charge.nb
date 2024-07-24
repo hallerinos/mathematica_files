@@ -6280,39 +6280,6 @@ o2l/5BZBbjP+yGU+E1X/T8oDckq11qK8SnbrtD3Kdbt3Sgz5/0j+PwCXj9aw
  CellLabel->"Out[9]=",ExpressionUUID->"687599e9-1348-4e68-80a9-e936640fa985"]
 }, Open  ]],
 
-Cell[BoxData[
- RowBox[{
-  RowBox[{"(*", " ", 
-   RowBox[{"Discretize", " ", "the", " ", "field"}], " ", "*)"}], "\n", 
-  RowBox[{
-   RowBox[{
-    RowBox[{"L1", "=", "8"}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"L2", "=", "8"}], ";"}], "\n", 
-   RowBox[{
-    RowBox[{"a1", "=", 
-     RowBox[{"{", 
-      RowBox[{"1.", ",", "0", ",", "0"}], "}"}]}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"a2", "=", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"data", "[", 
-         RowBox[{"[", 
-          RowBox[{";;", ",", "5"}], "]"}], "]"}], ",", 
-        RowBox[{"data", "[", 
-         RowBox[{"[", 
-          RowBox[{";;", ",", "6"}], "]"}], "]"}], ",", 
-        RowBox[{"data", "[", 
-         RowBox[{"[", 
-          RowBox[{";;", ",", "7"}], "]"}], "]"}]}], "}"}], "\[Transpose]"}], 
-     ")"}]}]}], ";"}]}], "Input",
- CellChangeTimes->{{3.898587474493944*^9, 3.898587511383443*^9}, 
-   3.898587656670466*^9, {3.898588001290887*^9, 3.898588001422558*^9}},
- CellLabel->"In[10]:=",ExpressionUUID->"77c5da2f-c3bb-4213-9214-a24c23b66c2a"],
-
 Cell[BoxData[{
  RowBox[{
   RowBox[{"data", "=", 
