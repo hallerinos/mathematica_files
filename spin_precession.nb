@@ -322,7 +322,7 @@ Cell[BoxData[{
    RowBox[{"mpin", "=", 
     RowBox[{"{", 
      RowBox[{"0", ",", "0", ",", "0.5"}], "}"}]}], ";"}], 
-  "\[IndentingNewLine]"}], "\n", 
+  "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"Clear", "[", "Exch", "]"}], ";"}], "\[IndentingNewLine]", 
