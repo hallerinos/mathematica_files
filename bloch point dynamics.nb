@@ -1,0 +1,50 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1110,         40]
+NotebookOptionsPosition[       762,         26]
+NotebookOutlinePosition[      1160,         42]
+CellTagsIndexPosition[      1117,         39]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Bloch", " ", "point", " ", "dynamics"}]], "Input",
+ CellChangeTimes->{{3.947067873386819*^9, 
+  3.947067876137197*^9}},ExpressionUUID->"313af75a-43e5-415e-8baf-\
+33569dcc6ecd"]
+},
+WindowSize->{808, 911},
+WindowMargins->{{Automatic, 235}, {38, Automatic}},
+FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"5f07985a-4e81-4d9e-b1e0-4d670f03c566"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 200, 4, 30, "Input",ExpressionUUID->"313af75a-43e5-415e-8baf-33569dcc6ecd"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
